@@ -21,6 +21,8 @@ def play_turn(player):
             print("Tupled out! Zero points for this turn.")
             return 0
         
+        # You could make this into a seperate function which cleans up the code and diffentiates when the program is 
+        # checking for a tuple out or fixed roll
         elif dice[0] == dice[1] or dice[1] == dice[2] or dice[0] == dice[2]:
             # This will identify and print the number that was rolled twice so it can be assigned to the fixed number.
             if dice[0] == dice[1]:
@@ -56,7 +58,8 @@ def play_turn(player):
                     continue 
 
             return sum(dice)
-        
+        # You could remove this part so that the player who doesnt have a fixed or tuple out roll has to play
+        # with what they rolled instead of asking them if they want to keep that score
         else:
             try: 
                 stop = input("Do you want to stop and score your current roll? (yes/no): ").strip().lower()
