@@ -59,7 +59,7 @@ def play_turn(player):
 
             return sum(dice)
         # You could remove this part so that the player who doesnt have a fixed or tuple out roll has to play
-        # with what they rolled instead of asking them if they want to keep that score
+        # with what they rolled instead of asking them if they want to keep that score.
         else:
             try: 
                 stop = input("Do you want to stop and score your current roll? (yes/no): ").strip().lower()
